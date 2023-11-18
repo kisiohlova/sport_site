@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us | Washington Commanders</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+  <!--Navbar-->
+  <header>
+    <div class="navbar">
+      <div class="container flex">
+        <nav>
+          <ul>
+            <li><a href="index.html">Main</a></li>
+            <li>
+              <a href="#">Matches</a>
+              <ul>
+                <li><a href="#">Calendar of Matches</a></li>
+                <li><a href="#">Next Game</a></li>
+                <li><a href="#">Ratings</a></li>
+              </ul>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Fans</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+        </nav>
+      </div>
+      <img id="rotatingImage" src="images/logo.png" alt="logo">
+    </div>
+  </header>
+  <!-- Main -->
+  <main>
+    <section class="contact-container">
+      <p>We are here to help. If you have a problem or simply just a question, choose from the following menu and an appropriate representative of the Washington Commanders will get back to you. If you aren't sure where to send your question, please select General Fan Comment.</p>
+      <p>If you’d like to contact us via mail, our address is FedExField, 1600 Fedex Way, Landover MD 20785.</p>
+      <p>Thanks for your questions and comments. We will get back to you as quickly as possible.</p>
+      <div class="contact-column">
+        <div class="contact-info">
+          <div class="container">
+            <h1>Contact Us</h1>
+            <!-- Form -->
+            <form>
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required autofocus>
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="inquiry">What can we help you with?</label>
+              <select id="inquiry" name="inquiry" required>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+              <label for="comments">Comments:</label>
+              <textarea id="comments" name="comments" rows="4" required></textarea>
+              <input type="submit" value="Submit Form">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="container" class="map-column">
+        <a href="https://maps.app.goo.gl/EHF4UgRSsLR1qCMbA" target="_blank">
+          <img src="images/contact_map.png" alt="Map Image">
+        </a>
+      </div>
+  </section>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright © 2023 Washington Commanders. All rights reserved.</p>
+    </div>
+  </footer>
+  </body>
+</html>
