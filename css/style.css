@@ -47,7 +47,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1.25rem 2rem;
 }
 
 .navbar a:hover {
@@ -62,7 +62,7 @@ header {
 
 .navbar li {
   position: relative;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .navbar a {
@@ -70,7 +70,7 @@ header {
   padding: 10px;
   color: #e1e1e1;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ header {
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0.3s ease;
   background-color: #5a1414;
-  padding: 10px;
+  padding: 1rem;
   white-space: nowrap;
 }
 
@@ -126,7 +126,7 @@ header {
 .footer {
   margin-top: auto;
   background-color: #5a1414;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   color: #e1e1e1;
   text-align: center;
 }
@@ -135,7 +135,7 @@ header {
 /* Photo */
 #photo {
   background-position: center;
-  padding-top: 70px;
+  padding-top: 5.5rem;
   max-width: 100%;
   height: auto;
 }
@@ -162,16 +162,16 @@ section p {
 }
 
 #row {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .tableicon {
-  max-width: 80px;
+  max-width: 5rem;
 }
 
 .wintable td{
-  border: 0px;
-  padding: 8px;
+  border: 0rem;
+  padding: 0.5px;
   text-align: center;
 }
 
@@ -183,10 +183,10 @@ section p {
   transform: rotate(360deg);
 }
 
-/* Contact page */
+/* Contact Us page */
 .contact-container {
-  margin: 20px auto;
-  padding-top: 90px;
+  margin: 1.25rem auto;
+  padding-top: 5.625rem;
   max-width: 1200px;
   overflow: hidden;
 }
@@ -197,40 +197,19 @@ section p {
 
 .contact-column {
   float: left;
-  padding-top: 30px;
-  width: 50%;
+  width: 45%;
+  margin: 5rem 0;
 }
 
 .map-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 50px;
-  max-width: 500px;
+  float: right;
+  width: 45%;
+  margin: 6rem 0;
 }
 
-.map-column img {
-  border-radius: 8px;
-  width: 510px;
-  height: auto;
-}
-
-/* Map animation */
-#container {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-#container img {
-  display: block;
-  z-index: 1;
-  transition: transform .4s;
-}
-
-#container:hover img {
-  transform: scale(1.3);
-  transform-origin: 50% 50%;
+.map-column iframe {
+  width: 100%;
+  min-height: 100%;
 }
 
 /* Contact Us form */
@@ -240,7 +219,7 @@ section p {
   border-radius: 8px;
   background-color: #f1f0f0;
   padding: 20px;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .contact-column h1 {
@@ -274,4 +253,147 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #fbce64;
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fbce64;
+  padding: 0.6rem 0;
+}
+
+/* Show more/less checkbox */
+#ch {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 21px;
+  }
+
+  /* Hide the menu by default */
+  .menu-list {
+    display: none;
+  }
+
+  /* Show the menu icon for smaller screens */
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar li {
+    margin-right: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar ul ul {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    background-color: #5a1414;
+    padding: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Show the menu for smaller screens */
+  .menu-list.show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 15rem;
+    background-color: #5a1414;
+    opacity: 90%;
+    padding: 0.5rem;
+  }
+
+  .menu-list.show-menu li {
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-icon {
+    order: -1; /* Move the icon to the beginning for smaller screens */
+  }
+
+/* Show the dropdown for smaller screens */
+  .navbar ul ul {
+    position: static;
+    display: none;
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .navbar li:focus > ul {
+    display: block;
+  }
+
+  /* Main */
+  .text {
+    height: 20rem;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  label {
+    position: absolute;
+    top: 100%;
+    padding-left: 2rem;
+    text-decoration: underline;
+  }
+
+  label:after {
+    content: "Show More";
+  }
+
+  input:checked + label:after {
+    content: "Show Less";
+  }
+
+  input:checked ~ div {
+    height: 100%;
+  }
+
+  /* Win table */
+  .wintable {
+    width: 100%;
+  }
+
+  .wintable th {
+    font-size: 0.8rem;
+  }
+
+  /* Contact Us page*/
+  .contact-container {
+    margin: 1.25rem auto;
+    padding-top: 5.625rem;
+    overflow: hidden;
+  }
+
+  .contact-column,
+  .map-column {
+    width: 90%;
+    float: none;
+    margin: auto;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .command-names {
+    display: none;
+  }
+
 }

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Washington Commanders</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Washington Commanders</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <script>
+      function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('show-menu');
+      }
+    </script>
   </head>
   <body>
   <!--Navbar-->
@@ -13,21 +20,24 @@
     <div class="navbar">
       <div class="container flex">
         <nav>
-          <ul>
-            <li><a href="index.html">Main</a></li>
-            <li>
-              <a href="#">Matches</a>
-              <ul>
-                <li><a href="#">Calendar of Matches</a></li>
-                <li><a href="#">Next Game</a></li>
-                <li><a href="#">Ratings</a></li>
-              </ul>
-            </li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Fans</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="#">Admin</a></li>
-          </ul>
+          <span class="menu-icon" onclick="toggleMenu()">☰</span>
+          <div class="menu-list">
+            <ul>
+              <li><a href="index.html">Main</a></li>
+              <li>
+                <a href="#">Matches</a>
+                <ul>
+                  <li><a href="#">Calendar of Matches</a></li>
+                  <li><a href="#">Next Game</a></li>
+                  <li><a href="#">Ratings</a></li>
+                </ul>
+              </li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Fans</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="#">Admin</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
       <img id="rotatingImage" src="images/logo.png" alt="logo">
@@ -38,13 +48,19 @@
     <div>
       <img id="photo" src="images/team.png" alt="logo">
     </div>
-    <section>
-      <h1>About Team</h1>
-      <p>The Washington Commanders are a professional American football team based in the Washington metropolitan area. The Commanders compete in the National Football League (NFL) as a member of the National Football Conference (NFC) East division. The team plays its home games at FedExField in Landover, Maryland; its headquarters and training facility are in Ashburn, Virginia. The team has played more than 1,000 games and is one of only five in the NFL with more than 600 total wins. Washington was among the first NFL franchises with a fight song: "Hail to the Commanders", played by their marching band after every touchdown scored by the team at home. The franchise is owned by group headed by Josh Harris, who acquired the team from Daniel Snyder in 2023 for $6.05 billion.</p>
-      <p>The franchise was founded by George Preston Marshall as the Boston Braves in 1932. The team changed its name to the Redskins the following year before moving to Washington, D.C., in 1937, to become the Washington Redskins. The Redskins branding was seen as controversial by many for decades. In 2020, pressure from several NFL and team sponsors led to its being retired as part of a wave of name changes in the wake of the George Floyd protests, which led to larger awareness of the Native American mascot controversy. The team played as the Washington Football Team for two seasons before rebranding as the Commanders in 2022.</p>
-      <p>Washington won the 1937 and 1942 NFL championship games and Super Bowls XVII, XXII, and XXVI. Washington has finished a season as league runner-up six times, losing the 1936, 1940, 1943, and 1945 title games and Super Bowls VII and XVIII. With 14 division titles and 24 postseason appearances, they have an overall postseason record of 23-18. Their three Super Bowl wins are tied with the Denver Broncos, Kansas City Chiefs and Las Vegas Raiders, behind the Pittsburgh Steelers and New England Patriots (six each), San Francisco 49ers and Dallas Cowboys (five each), and the Green Bay Packers and New York Giants (four each).</p>
-      <p>All of Washington's championships were attained during two 10-year spans. From 1936 to 1945, the team went to the NFL Championship six times, winning two of them. The second period lasted from 1982 to 1991 under owner Jack Kent Cooke, general managers Bobby Beathard and Charley Casserly, and head coach Joe Gibbs. From 1946 to 1970, Washington posted just four winning seasons and never reached the postseason. They went without a single winning season from 1956 to 1968, a span that included their worst regular-season record: 1-12-1 in 1961. Since their last Super Bowl victory in 1991, they have won the NFC East four times with only seven postseason appearances.</p>
-    </section>
+    <div class="container">
+      <input id="ch" type="checkbox">
+      <label for="ch"></label>
+      <div class="text">
+        <section class="about">
+          <h1>About Team</h1>
+          <p>The Washington Commanders are a professional American football team based in the Washington metropolitan area. The Commanders compete in the National Football League (NFL) as a member of the National Football Conference (NFC) East division. The team plays its home games at FedExField in Landover, Maryland; its headquarters and training facility are in Ashburn, Virginia. The team has played more than 1,000 games and is one of only five in the NFL with more than 600 total wins. Washington was among the first NFL franchises with a fight song: "Hail to the Commanders", played by their marching band after every touchdown scored by the team at home. The franchise is owned by group headed by Josh Harris, who acquired the team from Daniel Snyder in 2023 for $6.05 billion.</p>
+          <p>The franchise was founded by George Preston Marshall as the Boston Braves in 1932. The team changed its name to the Redskins the following year before moving to Washington, D.C., in 1937, to become the Washington Redskins. The Redskins branding was seen as controversial by many for decades. In 2020, pressure from several NFL and team sponsors led to its being retired as part of a wave of name changes in the wake of the George Floyd protests, which led to larger awareness of the Native American mascot controversy. The team played as the Washington Football Team for two seasons before rebranding as the Commanders in 2022.</p>
+          <p>Washington won the 1937 and 1942 NFL championship games and Super Bowls XVII, XXII, and XXVI. Washington has finished a season as league runner-up six times, losing the 1936, 1940, 1943, and 1945 title games and Super Bowls VII and XVIII. With 14 division titles and 24 postseason appearances, they have an overall postseason record of 23-18. Their three Super Bowl wins are tied with the Denver Broncos, Kansas City Chiefs and Las Vegas Raiders, behind the Pittsburgh Steelers and New England Patriots (six each), San Francisco 49ers and Dallas Cowboys (five each), and the Green Bay Packers and New York Giants (four each).</p>
+          <p>All of Washington's championships were attained during two 10-year spans. From 1936 to 1945, the team went to the NFL Championship six times, winning two of them. The second period lasted from 1982 to 1991 under owner Jack Kent Cooke, general managers Bobby Beathard and Charley Casserly, and head coach Joe Gibbs. From 1946 to 1970, Washington posted just four winning seasons and never reached the postseason. They went without a single winning season from 1956 to 1968, a span that included their worst regular-season record: 1-12-1 in 1961. Since their last Super Bowl victory in 1991, they have won the NFC East four times with only seven postseason appearances.</p>
+        </section>
+      </div>
+    </div>
     <br><hr><br>
     <section>
       <h1>Last Win</h1>
@@ -59,7 +75,7 @@
           <td>24</td>
           <td><img class="tableicon" src="images/logo.png" alt="logo"></td>
         </tr>
-        <tr>
+        <tr class="command-names">
           <td>Atlanta Falcons</td>
           <td></td>
           <td></td>
