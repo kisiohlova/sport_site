@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Washington Commanders</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <script>
+      function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('show-menu');
+      }
+    </script>
+  </head>
+  <body>
+  <!--Navbar-->
+  <header>
+    <div class="navbar">
+      <div class="container flex">
+        <nav>
+          <span class="menu-icon" onclick="toggleMenu()">☰</span>
+          <div class="menu-list">
+            <ul>
+              <li><a href="index.html">Main</a></li>
+              <li>
+                <a href="#">Matches</a>
+                <ul>
+                  <li><a href="#">Calendar of Matches</a></li>
+                  <li><a href="#">Next Game</a></li>
+                  <li><a href="#">Ratings</a></li>
+                </ul>
+              </li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="fans.html">Fans</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="admin.html">Admin</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <img id="rotatingImage" src="images/logo.png" alt="logo">
+    </div>
+  </header>
+  <!-- Main -->
+  <main class="admin">
+    <h1>Create News</h1>
+    <div class="admin-container">
+        <form id="news-form">
+            <img id="preview-image" src="images/news.png" alt="Image Placeholder">
+            <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)" required>
+            <label class="add-image-button" for="image" id="add-image-button">Add Image</label>
+
+            <input type="text" id="title" name="title" placeholder="News Title" required>
+            <textarea id="text" name="text" rows="4" placeholder="News Text" required></textarea>
+            <button type="button" id="news">Create News</button>
+            <label class="add-image-button" for="news">Add News</label>
+        </form>
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright © 2023 Washington Commanders. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/admin.js"></script>
+  </body>
+</html>

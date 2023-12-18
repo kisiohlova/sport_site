@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Washington Commanders</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <script>
+      function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('show-menu');
+      }
+    </script>
+  </head>
+  <body>
+  <!--Navbar-->
+  <header>
+    <div class="navbar">
+      <div class="container flex">
+        <nav>
+          <span class="menu-icon" onclick="toggleMenu()">☰</span>
+          <div class="menu-list">
+            <ul>
+              <li><a href="index.html">Main</a></li>
+              <li>
+                <a href="#">Matches</a>
+                <ul>
+                  <li><a href="#">Calendar of Matches</a></li>
+                  <li><a href="#">Next Game</a></li>
+                  <li><a href="#">Ratings</a></li>
+                </ul>
+              </li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="fans.html">Fans</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="admin.html">Admin</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <img id="rotatingImage" src="images/logo.png" alt="logo">
+    </div>
+  </header>
+  <!-- Main -->
+  <main class="news">
+    <h1>News</h1>
+    <div class="news-container">
+      <div class="news-item">
+          <img src="images/news.png" alt="News 1">
+          <h2>News Title 1</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa delectus
+            vero similique soluta obcaecati rem eos fugiat eveniet, id ex molestias
+            perferendis explicabo, quo quae. Veritatis nostrum tempore aspernatur dolorem?</p>
+      </div>
+      <div class="news-item">
+          <img src="images/news.png" alt="News 2">
+          <h2>News Title 2</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ipsa, non
+            nobis molestias incidunt dolores sunt dolorum minus explicabo voluptatem
+            consequatur quam, suscipit repellat alias quasi aut officia expedita ipsum.</p>
+      </div>
+      <div class="news-item">
+          <img src="images/news.png" alt="News 3">
+          <h2>News Title 3</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quidem
+            reprehenderit excepturi, nihil fuga ea ratione modi illo recusandae eaque
+            repellendus, eius beatae! Delectus perferendis minus nisi dolorem eum ad!</p>
+      </div>
+      <div class="news-item">
+          <img src="images/news.png" alt="News 4">
+          <h2>News Title 4</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ab doloremque
+            expedita iste culpa ipsa reprehenderit? Neque, pariatur velit. Explicabo
+            ut necessitatibus non numquam ducimus perspiciatis qui corrupti quod facere.</p>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright © 2023 Washington Commanders. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/news.js"></script>
+  </body>
+</html>

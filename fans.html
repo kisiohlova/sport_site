@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Washington Commanders</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <script>
+      function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('show-menu');
+      }
+    </script>
+  </head>
+  <body>
+  <!--Navbar-->
+  <header>
+    <div class="navbar">
+      <div class="container flex">
+        <nav>
+          <span class="menu-icon" onclick="toggleMenu()">☰</span>
+          <div class="menu-list">
+            <ul>
+              <li><a href="index.html">Main</a></li>
+              <li>
+                <a href="#">Matches</a>
+                <ul>
+                  <li><a href="#">Calendar of Matches</a></li>
+                  <li><a href="#">Next Game</a></li>
+                  <li><a href="#">Ratings</a></li>
+                </ul>
+              </li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="fans.html">Fans</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="admin.html">Admin</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <img id="rotatingImage" src="images/logo.png" alt="logo">
+    </div>
+  </header>
+  <!-- Main -->
+  <main class="fans">
+    <h1>Comments</h1>
+    <div id="comments">
+      <div class="comment">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          eaque tenetur earum! Ducimus, nam consequuntur soluta, aliquid iure magnam
+          dolores aut rem tenetur vel minus atque quasi id accusantium exercitationem.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          eaque tenetur earum! Ducimus, nam consequuntur soluta, aliquid iure magnam
+          dolores aut rem tenetur vel minus atque quasi id accusantium exercitationem.</p>
+        <div class="date-name">
+          <p class="timestamp">15/12/2023, 17:47</p>
+          <p class="fan_name">DedicatedFan</p>
+        </div>
+      </div>
+      <br>
+      <div class="comment">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+          eaque tenetur earum! Ducimus, nam consequuntur soluta, aliquid iure magnam
+          dolores aut rem tenetur vel minus atque quasi id accusantium exercitationem.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="date-name">
+          <p class="timestamp">13/12/2023, 11:37</p>
+          <p class="fan_name">football_fever</p>
+        </div>
+      </div>
+  </div>
+  <div class="form-container">
+    <form id="comment-form">
+      <h3>Leave a comment:</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" required></textarea>
+        <button type="submit" onclick="addComment()">Add Comment</button>
+    </form>
+  </div>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright © 2023 Washington Commanders. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/fans.js"></script>
+  </body>
+</html>
