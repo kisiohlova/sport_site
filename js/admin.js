@@ -16,6 +16,15 @@ function previewImage(event) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Check for online/offline status
+  window.addEventListener('online', function () {
+  });
+
+  window.addEventListener('offline', function () {
+  });
+});
+
 // Function to add news
 function addNews() {
   // Get form values
@@ -42,18 +51,26 @@ function addNews() {
     image: document.getElementById('preview-image').src,
   };
 
-  publishNews(post);
-}
+  // Save the news post to local storage
+  saveNewsToLocalStorage(post);
 
-// Function to publish news
-function publishNews(post) {
-  alert("News successfully published!");
+  if (navigator.onLine) {
+    alert("News successfully published!");
+  } else {
+    alert("You're offline. The news post will be published when the network status changes to online.");
+  }
 
   // Clear form fields
   document.getElementById('preview-image').src = "images/news.png";
   document.getElementById('image').value = "";
   document.getElementById('title').value = "";
   document.getElementById('text').value = "";
+}
+
+function saveNewsToLocalStorage(post) {
+  let newsPosts = JSON.parse(localStorage.getItem('newsPosts')) || [];
+  newsPosts.push(post);
+  localStorage.setItem('newsPosts', JSON.stringify(newsPosts));
 }
 
 // Add an event listener for the "Create News" button click
